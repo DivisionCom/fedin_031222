@@ -1,0 +1,31 @@
+﻿<Window x:Class="fedin_031222.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fedin_031222"
+        mc:Ignorable="d"
+        Title="Логистер" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="200*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Background="#FFE1E4FF" Orientation="Horizontal">
+            <Image Source="Resources/warehouse1.png" Width="55"
+                   HorizontalAlignment="Left" Margin="25 0 0 0"/>
+            <Button x:Name="btnBack" 
+                    Width="150" Height="30" FontSize="17"
+                    Foreground="White" Background="#FFFF4A6D"
+                    Margin="400 0 0 0" FontFamily="Tahoma" Click="btnBack_Click">Назад</Button>
+            <Button x:Name="btnExit" 
+                    Width="150" Height="30" FontSize="17"
+                    Foreground="White" Background="#FFFF4A6D"
+                    Margin="15 0 0 0" FontFamily="Tahoma" Click="btnExit_Click">Выйти</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            
+        </StackPanel>
+        <Frame x:Name="frmMain" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

@@ -1,0 +1,60 @@
+﻿<Page x:Class="fedin_031222.Pages.PageTableMaterials"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:fedin_031222.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageTableMaterials">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <DataGrid Name="gridList"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Binding="{Binding materials_name}"
+                    Header="Название материала"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_count}"
+                    Header="Количество"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_category}"
+                    Header="Категория"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_manufacturer}"
+                    Header="Производитель"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_providers}"
+                    Header="Поставщик"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_description}"
+                    Header="Описание"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_photo}"
+                    Header="Картинка"
+                    Width="*"/>
+                <DataGridTextColumn
+                    Binding="{Binding materials_available}"
+                    Header="Доступность"
+                    Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="btnDel"
+                    Content="Удалить"
+                    Margin="635 0 0 0"
+                    Width="150"
+                    Style="{StaticResource mainBtn}" Click="btnDel_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

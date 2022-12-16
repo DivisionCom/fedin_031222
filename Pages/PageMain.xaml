@@ -1,0 +1,46 @@
+﻿<Page x:Class="fedin_031222.Pages.PageMain"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:fedin_031222.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMain">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Добро пожаловать!"
+                       Style="{StaticResource mainTxtb}"
+                       FontSize="30"
+                       Width="305"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0 50 0 0"
+                       FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Button
+                    Name="btnMaterials"
+                    Click="btnMaterials_Click"
+                    Content="Материалы"
+                    Style="{StaticResource mainBtn}"/>
+                <Button 
+                    Name="btnAddMaterials"
+                    Click="btnAddMaterials_Click"
+                    Content="Добавить материалы"
+                    Style="{StaticResource mainBtn}"/>
+                <Button 
+                    Name="btnTableMaterials"
+                    Content="Посмотреть таблицу"
+                    Style="{StaticResource mainBtn}" Click="btnTableMaterials_Click"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Page>
